@@ -236,19 +236,18 @@ export default function Standings() {
                         >
                           <td className="pos muted">{r.position}</td>
 
-                          <td>
+                          <td className="teamCell">
                             <div className="team">
-                            {r.team?.crest ? (
-                              <img className="crest" src={r.team.crest} alt="" />
-                            ) : null}
+                                {r.team?.crest ? <img className="crest" src={r.team.crest} alt="" /> : null}
 
-                            {r.team?.id ? (
-                              <Link className="teamLink" to={`/team/${r.team.id}`}>
-                                {r.team?.shortName ?? r.team?.name ?? "—"}
-                              </Link>
-                            ) : (
-                              <span>{r.team?.shortName ?? r.team?.name ?? "—"}</span>
-                            )}
+    {r.team?.id ? (
+      <Link className="teamLink" to={`/team/${r.team.id}`}>
+        {r.team?.shortName ?? r.team?.name ?? "—"}
+      </Link>
+    ) : (
+      <span className="teamText">{r.team?.shortName ?? r.team?.name ?? "—"}</span>
+    )}
+
                             </div>
                           </td>
 

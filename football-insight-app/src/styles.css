@@ -206,16 +206,20 @@ a{ color:inherit; text-decoration:none; }
 
 .chev{ color: var(--muted); font-size: 22px; line-height: 1; }
 
-.tableWrap{ overflow:auto; }
+.tableWrap{  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
 
 /* TABLE (allineamento + look) */
 .table{
   width: 100%;
+   min-width: 680px; /* tweak if needed */
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;
   font-size: 13px;
 }
+
+.teamCell { overflow: visible; } /* safe */
 
 .table th, .table td{
   border-bottom: 1px solid var(--stroke);
@@ -244,12 +248,12 @@ a{ color:inherit; text-decoration:none; }
 .col-pts{ width: 64px; }
 /* col-team prende lo spazio restante */
 
-.table td{ overflow:hidden; }
 
 .team{ display:flex; align-items:center; gap:10px; min-width:0; }
 .team span{ overflow:hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.crest{ width: 18px; height: 18px; object-fit: contain; }
+.crest{ width: 18px; height: 18px; object-fit: contain; flex-shrink: 0;   /* IMPORTANT: prevents the logo from shrinking away */
+  display: block;}
 
 /* Density toggle */
 .density-comfy .table th,
