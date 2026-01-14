@@ -36,43 +36,50 @@ function HomeShader() {
   return (
     <div className="homeShader" aria-hidden="true">
       <ShaderGradientCanvas style={{ position: "absolute", inset: 0 }} pixelDensity={pixelDensity} fov={20}>
-        <ShaderGradient
-          control="props"
-          animate={reduced ? "off" : "on"}
-          axesHelper="off"
-          brightness={0.9}
-          cAzimuthAngle={130}
-          cDistance={4.2}
-          cPolarAngle={101}
-          cameraZoom={1}
-          color1="#380000"
-          color2="#8cba8d"
-          color3="#59714d"
-          envPreset="city"
-          frameRate={10}
-          gizmoHelper="hide"
-          grain="on"
-          lightType="3d"
-          positionX={-1.4}
-          positionY={-1.4}
-          positionZ={0.9}
-          range="disabled"
-          rangeEnd={40}
-          rangeStart={0}
-          reflection={0.1}
-          rotationX={10}
-          rotationY={10}
-          rotationZ={50}
-          shader="defaults"
-          type="waterPlane"
-          uAmplitude={1}
-          uDensity={1.2}
-          uFrequency={5.5}
-          uSpeed={0}
-          uStrength={8.8}
-          uTime={0}
-          wireframe={false}
-        />
+       <ShaderGradient
+  animate="off"
+  axesHelper="on"
+  bgColor1="#000000"
+  bgColor2="#000000"
+  brightness={0.8}
+  cAzimuthAngle={180}
+  cDistance={2.9}
+  cPolarAngle={115}
+  cameraZoom={1}
+  color1="#33256b"
+  color2="#9589fe"
+  color3="#000000"
+  destination="onCanvas"
+  embedMode="off"
+  envPreset="city"
+  format="gif"
+  fov={45}
+  frameRate={10}
+  gizmoHelper="hide"
+  grain="on"
+  lightType="3d"
+  pixelDensity={1}
+  positionX={-0.5}
+  positionY={0.1}
+  positionZ={0}
+  range="disabled"
+  rangeEnd={40}
+  rangeStart={0}
+  reflection={0.1}
+  rotationX={0}
+  rotationY={0}
+  rotationZ={235}
+  shader="defaults"
+  type="waterPlane"
+  uAmplitude={0}
+  uDensity={1.1}
+  uFrequency={5.5}
+  uSpeed={0.1}
+  uStrength={2.4}
+  uTime={0.2}
+  wireframe={false}
+  zoomOut={false}
+/>
       </ShaderGradientCanvas>
 
       <div className="homeShaderVignette" />
