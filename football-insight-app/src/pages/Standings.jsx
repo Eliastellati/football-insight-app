@@ -236,7 +236,8 @@ export default function Standings() {
                         >
                           <td className="pos muted">{r.position}</td>
 
-                          <td className="team">
+                          <td>
+                            <div className="team">
                             {r.team?.crest ? (
                               <img className="crest" src={r.team.crest} alt="" />
                             ) : null}
@@ -248,6 +249,7 @@ export default function Standings() {
                             ) : (
                               <span>{r.team?.shortName ?? r.team?.name ?? "—"}</span>
                             )}
+                            </div>
                           </td>
 
                           <td className="num">{r.playedGames}</td>
